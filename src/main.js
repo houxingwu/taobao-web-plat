@@ -10,9 +10,16 @@ import Vuex from 'vuex'
 //import NProgress from 'nprogress'
 //import 'nprogress/nprogress.css'
 import routes from './routes'
-import Mock from './mock'
-Mock.bootstrap();
+//禁用mock，mock就不会拦截请求了
+//import Mock from './mock'
+//Mock.bootstrap();
 import 'font-awesome/css/font-awesome.min.css'
+import axios from 'axios'
+// 引用axios，并设置基础URL为后端服务api地址
+axios.defaults.baseURL = 'https://www.easy-mock.com/mock/5d3f031139c8210e7cdf61af'  //对应后端网关统一地址
+// 将API方法绑定到全局  /plat/login
+Vue.prototype.$http = axios
+Vue.config.productionTip = false
 
 Vue.use(ElementUI)
 Vue.use(VueRouter)
