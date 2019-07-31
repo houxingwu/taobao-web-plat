@@ -66,7 +66,7 @@
               }
             });*/
               //使用自己的axios发送请求
-              this.$http.post('/login', loginParams)
+              this.$http.post('/plat/login', loginParams)
                   .then((data)=> {
                       this.logining = false;
                       //NProgress.done();

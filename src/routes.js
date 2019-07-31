@@ -2,6 +2,8 @@ import Login from './views/Login.vue'
 import NotFound from './views/404.vue'
 import Home from './views/Home.vue'
 import Main from './views/Main.vue'
+import Brand from './views/product/Brand.vue'
+import ProductType from './views/product/ProductType.vue'
 import Table from './views/nav1/Table.vue'
 import Form from './views/nav1/Form.vue'
 import user from './views/nav1/user.vue'
@@ -39,8 +41,8 @@ let routes = [
         name: '商品模块',
         iconCls: 'el-icon-message',//图标样式class
         children: [
-            { path: '/main', component: Main, name: '商品品牌'},
-            { path: '/table', component: Table, name: '商品类型' },
+            { path: '/brand', component: Brand, name: '商品品牌'},
+            { path: '/productType', component: ProductType, name: '商品类型' },
             { path: '/form', component: Form, name: '商品模板' },
             { path: '/user', component: user, name: '商品规格' },
             { path: '/page4', component: Page4, name: '商品管理' },
